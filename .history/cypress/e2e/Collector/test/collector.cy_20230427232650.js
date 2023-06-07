@@ -1,0 +1,41 @@
+import {
+  LOGIN_VALID,
+  LOGIN_INVALID,
+  INACTIVE_USER,
+  BLANK_PASSWORD,
+} from "../../../fixtures/userRetailer";
+describe("Positive Case", () => {
+  let TokenCollect,
+  describe("Login", () => {
+    it("Login Collector", () => {
+      cy.request({
+        method: "POST",
+        url: `${Cypress.env("baseUrl")}${Cypress.env("loginCollectUrl")}`,
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: LOGIN_VALID,
+      }).then((response) => {
+        expect(response.status).to.equal(200);
+        cy.log(JSON.stringify(response.body));
+
+      });
+    });
+  
+    it("Login Seller [Invalid]", () => {
+      cy.request({
+        method: "POST",
+        failOnStatusCode: false,
+        url: `${Cypress.env("baseUrl")}${Cypress.env("loginCollectUrl")}`,
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: LOGIN_INVALID,
+      }).then((response) => {
+        expect(response.status).to.equal(404);
+        cy.log(JSON.stringify(response.body));
+      });
+    });
+  });
+})
+
