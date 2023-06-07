@@ -202,56 +202,11 @@ describe("Test Case End To End", () => {
       cy.log(JSON.stringify(response.body));
     })
   });
-
   //Find All Transports
   it("Find All Transports", () => {
     cy.request({
       method: "GET",
       url: `${Cypress.env("baseUrl")}${Cypress.env("findAllTransports")}`
-    }).then((response) => {
-      expect(response.status).to.equal(200);
-      cy.log(JSON.stringify(response.body));
-    })
-  });
-
-  //Collection History
-  it("Collection History", () => {
-    cy.request({
-      method: "GET",
-      url: `${Cypress.env("baseUrl")}${Cypress.env("collectionHistory")}`
-    }).then((response) => {
-      expect(response.status).to.equal(200);
-      cy.log(JSON.stringify(response.body));
-    })
-  });
-  
-  //Find Operator Route
-  it("Find Operator Route", () => {
-    cy.request({
-      method: "GET",
-      url: `${Cypress.env("baseUrl")}${Cypress.env("findOperatorRoute")}`
-    }).then((response) => {
-      expect(response.status).to.equal(200);
-      cy.log(JSON.stringify(response.body));
-    })
-  });
-
-  //Drop Index V2
-  it("Drop Index V2", () => {
-    cy.request({
-      method: "GET",
-      url: `${Cypress.env("baseUrl")}${Cypress.env("dropIndexV2")}`
-    }).then((response) => {
-      expect(response.status).to.equal(200);
-      cy.log(JSON.stringify(response.body));
-    })
-  });
-
-  //Drop Index V3
-  it("Drop Index V3", () => {
-    cy.request({
-      method: "GET",
-      url: `${Cypress.env("baseUrl")}${Cypress.env("dropIndexV3")}`
     }).then((response) => {
       expect(response.status).to.equal(200);
       cy.log(JSON.stringify(response.body));

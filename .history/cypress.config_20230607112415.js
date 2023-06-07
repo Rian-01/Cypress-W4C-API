@@ -54,10 +54,7 @@ module.exports = defineConfig({
     findOperatorTypeAndRole: "/api/v2/operator?type=Internal&role=Transport",
     listDriver: "/api/v2/operator/driver",
     listDriverAssistance: "/api/v2/operator/driver-assistant",
-    findAllTransports: "/api/v2/operator/find-all-operator-transports",
-    collectionHistory: "/api/v2/operator/collection-history/0d601e34-5c4d-4a50-b220-f8935b956c52",
-    findOperatorRoute: "/api/v2/operator/find-operator-route/0d601e34-5c4d-4a50-b220-f8935b956c52",
-    
+    findAllTransports: "/api/v2/operator/find-all-operator-transports"
     
 
   },

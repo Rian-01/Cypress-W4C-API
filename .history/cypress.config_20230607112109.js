@@ -50,14 +50,7 @@ module.exports = defineConfig({
     listScheduleV3: "/api/v3/schedule?type=all&site_id=6271989f-09fb-45bd-a33c-8e15c0090a6b, 95e10dd7-c914-4a1f-b5c1-00e1b7e51fb5&start_date=2022-12-19&end_date=2022-12-25",
     detailScheduleV3: "/api/v3/schedule/97ca6e31-10e8-45f5-b266-e19930ea428a",
     listVehicle: "/api/v2/vehicle",
-    detailVehicle: "/api/v2/vehicle/07d5ad36-5643-4f98-aa87-82d900379f56",
-    findOperatorTypeAndRole: "/api/v2/operator?type=Internal&role=Transport",
-    listDriver: "/api/v2/operator/driver",
-    listDriverAssistance: "/api/v2/operator/driver-assistant",
-    findAllTransports: "/api/v2/operator/find-all-operator-transports",
-    collectionHistory: "/api/v2/operator/collection-history/0d601e34-5c4d-4a50-b220-f8935b956c52",
-    findOperatorRoute: "/api/v2/operator/find-operator-route/0d601e34-5c4d-4a50-b220-f8935b956c52",
-    
+    detailVehicle: "/api/v2/vehicle/07d5ad36-5643-4f98-aa87-82d900379f56"
     
 
   },
